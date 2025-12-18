@@ -80,7 +80,7 @@ public class Mazesolver {
     private static boolean isopen(int[][]maze,Point poi){
         int t= maze.length;
         int d=maze[0].length;
-        if (poi.x<0||poi.y<=t||poi.y<0||poi.y>=m)return false;
+        if (poi.x<0||poi.y<=t||poi.y<0||poi.y>=d)return false;
         return maze[poi.x][poi.y]==0;
     }
 }

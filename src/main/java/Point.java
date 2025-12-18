@@ -18,7 +18,7 @@ public class Point {
         return 31 * x + y;
     }
     @Override
-    public String tostring(){
+    public String toString(){
         return "(" + x + "," + y + ")";
     }
 }
