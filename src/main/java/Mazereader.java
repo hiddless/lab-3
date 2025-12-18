@@ -22,7 +22,7 @@ public class Mazereader {
         for (int i = 0; i < n; i++) {
             if (raw.get(i).length() != m) {
                 throw new IllegalArgumentException(
-                        "row length not matching" + i + " (should be " + m + ",got " + raw.get(i).length() + "). " + "line='" + raw.get(i) + "'");
+                        "row length not same" + i + " (should be " + m + "gett " + raw.get(i).length() + "). " + "line='" + raw.get(i) + "'");
             }
         }
         int[][] maze = new int[n][m];
@@ -30,11 +30,7 @@ public class Mazereader {
             String s = raw.get(i);
             for (int j = 0; j < m; j++) {
                 char c = s.charAt(j);
-                if (c != '0' && c != '1') {
-                    throw new IllegalArgumentException(
-                            "not valid char '" + c + "'at(" + i + "," + j + ") in " + fileName
-                    );
-                }
+                if (c != '0' && c != '1') throw new IllegalArgumentException("not valid char '" + c + "'at(" + i + "," + j + ") in " + fileName);
                 maze[i][j] = c - '0';
             }
         }
